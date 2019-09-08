@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>D&S HW #1: Git & HTML Review</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--all nav bars were bootstrap navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info.html">User Information</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Table of Books</a>
+            </li>
+        </div>
+      </nav>
+
+      <div class="bgimage" style="background-image:url('images/books.jpg')">
+        <p class = "imgcitation"><cite>https://images.app.goo.gl/jye4jiCSfEmQEVxKA</cite> From Google Images</p>
+      </div>
+
+      <div class="welcome">
+        <h1 id = "bookpgtitle">Books</h1>
+      </div>
+
+      <div class="bookcontainer">
+        <div class="row">
+          <div class="col-sm">
+            <table id = "bookTable" style="width:100%">
+              <thead>
+              <tr>
+               <th>Title</th>
+               <th>Author(s)</th>
+               <th>Year Published</th>
+               <th>Publisher</th>
+               <th>Page Count</th>
+               <th>MSRP</th>
+              </tr>
+              </thead>
+              <tr>
+               <td>Where the Crawdads Sing</td>
+               <td>Delia Owens</td>
+               <td>2018</td>
+               <td>Peguin Publishing Group</td>
+               <td>384</td>
+               <td>$13.00</td>
+              </tr>
+              <tr>
+               <td>Educated</td>
+               <td>Tara Westover</td>
+               <td>2018</td>
+               <td>Random House Publishing Group</td>
+               <td>352</td>
+               <td>$14.00</td>
+              </tr>
+              <tr>
+               <td>The Turn of the Key</td>
+               <td>Ruth Ware</td>
+               <td>2019</td>
+               <td>Gallery/Scout Press</td>
+               <td>352</td>
+               <td>$13.99</td>
+              </tr>
+              <tr>
+               <td>Firefly Lane</td>
+               <td>Kristin Hannah</td>
+               <td>2009</td>
+               <td>St. Martin's Publishing Group</td>
+               <td>528</td>
+               <td>$8.49</td>
+              </tr>
+              <tr>
+               <td>The Lost Girls of Paris</td>
+               <td>Pam Jenoff</td>
+               <td>2019</td>
+               <td>Park Row Books</td>
+               <td>384</td>
+               <td>$8.49</td>
+              </tr>
+            </table>
+          </div>
+          <!--Initial Form taken from getbootstrap.com forms, then modified -->
+          <div class="col-sm">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputBookname">Title</label>
+                  <input type="text" class="form-control" id="inputBookname" placeholder="The Intelligent Investor">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputAuthorname">Author(s) Name</label>
+                  <input type="text" class="form-control" id="inputAuthorname" placeholder="Delia Owens, Nick Brody">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputYear">Year Published</label>
+                <input type="number" class="form-control" id="inputYear" placeholder="2018">
+              </div>
+              <div class="form-group">
+                <label for="inputPgcount">Page Count</label>
+                <input type="number" class="form-control" id="inputPgcount" placeholder="319">
+              </div>
+              <div class="form-group">
+                <label for="inputPrice">MSRP (Price)</label>
+                <input type="number" class="form-control" id="inputPrice" placeholder="13.99">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+          </div>
+          </div>
+          <div class="end">
+
+          </div>
+          <!-- tablesort plugin from http://tristen.ca/tablesort/demo/-->
+          <script src="js/tablesort.min.js"></script>
+          <script src='tablesort.number.js'></script>
+          <script src='tablesort.date.js'></script>
+          <script>
+          new Tablesort(document.getElementById('bookTable'));
+        </script>
+  </body>
+
+</html>
