@@ -38,15 +38,142 @@
 
     <div class="containeruser">
       <div class="row">
+        <!-- <b>Name:</b><br> -->
+        <div id="randomUsers" style="width: 100%;">
+
+          <div class="col-sm">
+          <div class="people peopleWaiting" v-for="people in peopleList">
+            <!-- <p id="patientFName"></p> -->
+            <a :href="people.large">
+            <img v-bind:src="people.thumbnail" alt="">
+          </a>
+          </div>
+        </div>
+
+          <div class="col-sm">
+          <span><b>Name:</b></span>
+          <div class="people peopleWaiting" v-for="people in peopleList">
+            <!-- <p id="patientFName"></p> -->
+            <span>{{ people.first }} {{people.last}}</span>
+          </div>
+        </div>
+
         <div class="col-sm">
+          <span><b>City:</b></span>
+          <div class="people peopleWaiting" v-for="people in peopleList">
+            <!-- <p id="patientFName"></p> -->
+            <span>{{people.city}}</span>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <span><b>DOB:</b></span>
+          <div class="people peopleWaiting" v-for="people in peopleList">
+            <!-- <p id="patientFName"></p> -->
+            <span>{{people.date}}</span>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <span><b>Age:</b></span>
+          <div class="people peopleWaiting" v-for="people in peopleList">
+            <!-- <p id="patientFName"></p> -->
+            <span>{{people.age}}</span>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <span><b>Email:</b></span>
+          <div class="people peopleWaiting">
+            <!-- <p id="patientFName"></p> -->
+            <a :href="`mailto:${peopleList.email}`">{{peopleList.email}}</a>
+          </div>
+        </div>
+            <!-- <div class="col-sm"><b>City:</b><br>{{ people.city }}</div> -->
+          <!-- <b>City:</b><br> -->
+          <!-- <div id="randomUsers">
+            <div class="people peopleWaiting" v-for="people in peopleList">
+               <p id="patientFName"></p>
+              <span>Name:</span>
+              <span>{{ people.first }}{{people.last}}</span>
+              <span>City:</span>
+              <span>{{people.city}}</span>
+              </div>
+               <div class="col-sm"><b>City:</b><br>{{ people.city }}</div>
+            </div> -->
+
+
+          </div>
+        </div>
+      </div>
+
+          <!-- <div id="randomUsers" class = col-sm>
+            <span><b>Name:</b></span>
+            <div class="people peopleWaiting" v-for="people in peopleList">
+               <p id="patientFName"></p>
+              <span>{{ people.first }} {{people.last}}</span>
+            </div>
+
+            <span><b>City:</b></span>
+            <div class="people peopleWaiting" v-for="people in peopleList">
+             <p id="patientFName"></p>
+              <span>{{people.city}}</span>
+            </div>
+
+            <span><b>DOB:</b></span>
+            <div class="people peopleWaiting" v-for="people in peopleList">
+            <p id="patientFName"></p>
+              <span>{{people.date}}</span>
+            </div>
+
+            <span><b>Age:</b></span>
+            <div class="people peopleWaiting" v-for="people in peopleList">
+          <p id="patientFName"></p>
+              <span>{{people.age}}</span>
+            </div>
+
+            <span><b>Email:</b></span>
+            <div class="people peopleWaiting">
+               <p id="patientFName"></p>
+              <span>{{peopleList.email}}</span>
+            </div>
+
+               <div class="col-sm"><b>City:</b><br>{{ people.city }}</div>
+            </div> -->
+            <!-- <b>City:</b><br> -->
+            <!-- <div id="randomUsers">
+              <div class="people peopleWaiting" v-for="people in peopleList">
+                 <p id="patientFName"></p>
+                <span>Name:</span>
+                <span>{{ people.first }}{{people.last}}</span>
+                <span>City:</span>
+                <span>{{people.city}}</span>
+                </div>
+                 <div class="col-sm"><b>City:</b><br>{{ people.city }}</div>
+              </div> -->
+            </div>
+
+        </div>
+      </div>
+          <!-- <div class="col-sm">
+          <b>City:</b><br>
+          <div class="people peopleWaiting" v-for="people in peopleList">
+             <p id="patientFName"></p>
+            {{ people.city }}
+            </div>
+           <div class="col-sm"><b>City:</b><br>{{ people.city }}</div>
+          </div> -->
+
+
+        <!-- <div class="col-sm">
           <a href="https://randomuser.me/api/portraits/men/67.jpg">
           <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Randy">
           </a>
           <p><cite>Random User</cite> From randomuser.me</p>
-        </div>
-        <div class="col-sm">
+        </div> -->
+        <!-- <div class="col-sm">
           <b>Name:</b><br>
-          Randy Garza
+          {{people.first}}
         </div>
         <div class="col-sm">
           <b>Country:</b><br>
@@ -63,10 +190,10 @@
         <div class="col-sm">
           <b>Email:</b><br>
           <a href="mailto:rgarza@gmail.com">rgarza@gmail.com</a>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-sm">
           <a href="https://randomuser.me/api/portraits/men/64.jpg">
           <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="Joe">
@@ -75,7 +202,7 @@
         </div>
         <div class="col-sm">
           <b>Name:</b><br>
-          Joe Daniels
+          {{ user.first }}
         </div>
         <div class="col-sm">
           <b>Country:</b><br>
@@ -93,8 +220,10 @@
           <b>Email:</b><br>
           <a href="mailto:jdaniels@gmail.com">jdaniels@gmail.com</a>
         </div>
-      </div>
-    </div>
-
+      </div> -->
+    <!-- </div>
+  </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/randomProfile.js"></script>
   </body>
 </html>
