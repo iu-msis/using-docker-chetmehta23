@@ -42,7 +42,7 @@
         <div id="randomUsers" style="width: 100%;">
 
           <div class="col-sm">
-          <div class="people peopleWaiting" v-for="people in peopleList">
+          <div class="people peopleWaiting" v-for="people in peopleList" v-if="people.thumbnail">
             <!-- <p id="patientFName"></p> -->
             <a :href="people.large">
             <img v-bind:src="people.thumbnail" alt="">
