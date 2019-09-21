@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -89,7 +90,10 @@
             <a :href="`mailto:${peopleList.email}`">{{peopleList.email}}</a>
           </div>
         </div>
-
+        <form @submit.prevent="handleCreateRecord">
+        <form>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
           </div>
         </div>
       </div>
@@ -97,74 +101,6 @@
 
         </div>
       </div>
-          <!-- <div class="col-sm">
-          <b>City:</b><br>
-          <div class="people peopleWaiting" v-for="people in peopleList">
-             <p id="patientFName"></p>
-            {{ people.city }}
-            </div>
-           <div class="col-sm"><b>City:</b><br>{{ people.city }}</div>
-          </div> -->
-
-
-        <!-- <div class="col-sm">
-          <a href="https://randomuser.me/api/portraits/men/67.jpg">
-          <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Randy">
-          </a>
-          <p><cite>Random User</cite> From randomuser.me</p>
-        </div> -->
-        <!-- <div class="col-sm">
-          <b>Name:</b><br>
-          {{people.first}}
-        </div>
-        <div class="col-sm">
-          <b>Country:</b><br>
-          Thailand
-        </div>
-        <div class="col-sm">
-          <b>DOB:</b><br>
-          14 January 1990
-        </div>
-        <div class="col-sm">
-          <b>Age:</b><br>
-          29
-        </div>
-        <div class="col-sm">
-          <b>Email:</b><br>
-          <a href="mailto:rgarza@gmail.com">rgarza@gmail.com</a>
-        </div> -->
-      <!-- </div> -->
-
-      <!-- <div class="row">
-        <div class="col-sm">
-          <a href="https://randomuser.me/api/portraits/men/64.jpg">
-          <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="Joe">
-          </a>
-          <p><cite>Random User</cite> From randomuser.me</p>
-        </div>
-        <div class="col-sm">
-          <b>Name:</b><br>
-          {{ user.first }}
-        </div>
-        <div class="col-sm">
-          <b>Country:</b><br>
-          Denmark
-        </div>
-        <div class="col-sm">
-          <b>DOB:</b><br>
-          01 March 1985
-        </div>
-        <div class="col-sm">
-          <b>Age:</b><br>
-          34
-        </div>
-        <div class="col-sm">
-          <b>Email:</b><br>
-          <a href="mailto:jdaniels@gmail.com">jdaniels@gmail.com</a>
-        </div>
-      </div> -->
-    <!-- </div>
-  </div> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/randomProfile.js"></script>
   </body>
